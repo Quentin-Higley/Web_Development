@@ -1,0 +1,250 @@
+@charset "utf-8";
+html, html *
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body
+{
+    font-size: 1em;
+    margin: 0;
+    background-color: #222222;
+}
+
+header
+{
+    background-color: #adadad;
+    padding: .2em;
+    border-radius: .25em;
+}
+
+
+
+#background
+{
+    background-image: url("../IMG/backgroundImg.png");
+    background-size: cover;
+    display: block;
+    position: absolute;
+    -webkit-filter: blur(5px);
+    left: 0;
+    right: 0;
+    height:480px;
+    z-index: -1;
+}
+
+#logo
+{
+    display: block;
+    margin: auto;
+    height: 40px;
+}
+#main
+{
+    margin: auto;
+    max-width: 100%;
+    background-color: rgba(97,97,97,0.31);
+    border-radius: .25em;
+}
+#intro
+{
+    display: block;
+}
+#intro img
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+#music
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ blockquote
+{
+    margin: 1.5em;
+}
+
+#quote p{
+    margin-left: 40%;
+}
+
+nav
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+nav ul
+{
+    background-color: rgba(255,255,255,0.3);
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding: .2em;
+    border-radius: .25em;
+}
+nav ul li
+{
+    margin: .5em;
+}
+
+nav ul li a
+{
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    height: 2em;
+    padding: .2em;
+    text-decoration: none;
+    font-family: 'Michroma', sans-serif;
+    background-color: rgba(25, 113, 133, 0.31);
+}
+
+/*Used for defaults on spotify headings*/
+.headings
+{
+    font-family: 'Michroma', sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: .5em;
+}
+/*Used for defaults on spotify links*/
+.spotify
+{
+    height: 15em;
+    width: 15em;
+}
+
+#schedule
+{
+    overflow-x: scroll;
+}
+#schedule table
+{
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: .1em solid #ddd;
+}
+th, td
+{
+    font-size: .8em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: .1em solid #ddd;
+    text-align: center;
+    padding: .2em;
+}
+
+tr:nth-child(even)
+{
+    background-color: rgba(15, 85, 96, 0.31);
+}
+
+nav ul li a:hover
+{
+    background-color: #0f5560;
+}
+
+#contact fieldset
+{
+    margin: auto;
+    display: block;
+    width: 200px;
+}
+/*Tablet*/
+@media (min-width: 768px) 
+{
+    nav
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    nav ul li
+    {
+        display: inline-block;
+        margin: 0;
+    }
+    nav ul li a
+    {
+        font-size: 1.2em;
+        padding: .4em;
+    }
+    #background
+    {
+        height: 768px;
+    }
+    #main
+    {
+        max-width: 700px;
+    }
+    /*Used for defaults on spotify links*/
+    .spotify
+    {
+        height: 20em;
+        width: 20em;
+    }
+    #schedule
+    {
+        overflow-x: scroll;
+        font-size: 1em;
+    }
+    #contact fieldset
+    {
+
+        width: 300px;
+    }
+}
+/*Desktop*/
+@media (min-width: 1080px)
+{
+    nav
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    nav ul li
+    {
+        display: inline-block;
+        margin: 0;
+    }
+    nav ul li a
+    {
+        font-size: 1.3em;
+        padding: .4em;
+    }
+    #background
+    {
+        height: 1080px;
+    }
+    #main
+    {
+        max-width: 900px;
+    }
+    /*Used for defaults on spotify links*/
+    .spotify
+    {
+        height: 25em;
+        width: 25em;
+    }
+    #contact fieldset
+    {
+
+        width: 400px;
+    }
+}

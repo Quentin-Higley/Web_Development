@@ -1,0 +1,275 @@
+@charset "utf-8";
+html, html *
+{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body
+{
+    font-size: 1em;
+    margin: 0;
+    background-color: #222222;
+}
+
+header
+{
+    background-color: #adadad;
+    padding: .2em;
+    border-radius: .25em;
+}
+
+#logo
+{
+    display: block;
+    margin: auto;
+    height: 40px;
+}
+#main
+{
+    margin: auto;
+    max-width: 100%;
+    background-color: rgba(97,97,97,0.31);
+    border-radius: .25em;
+}
+#intro
+{
+    background-image: url("../IMG/backgroundImg.png");
+    background-size: cover;
+    overflow: hidden;
+}
+#intro img
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 200px;
+    max-height: 300px;
+    border-radius: 50%;
+    float: left;
+}
+#introText
+{
+    margin-top: 1em;
+    position: relative;
+}
+
+#clear
+{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+#resume
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+#resume h1
+{
+    font-size: 3em;
+}
+#resume h3
+{
+    font-size: 1.5em;
+}
+#resume
+{
+    font-size: 1em;
+}
+#resume p
+{
+    font-size: .75em;
+}
+
+nav
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+nav ul
+{
+    background-color: rgba(255,255,255,0.3);
+    list-style-type: none;
+    text-align: center;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding: .2em;
+    border-radius: .25em;
+}
+nav ul li
+{
+    margin: .5em;
+}
+
+nav ul li a
+{
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    height: 2em;
+    padding: .2em;
+    text-decoration: none;
+    font-family: 'Michroma', sans-serif;
+    background-color: rgba(25, 113, 133, 0.31);
+}
+
+
+
+#schedule
+{
+    overflow-x: scroll;
+}
+#schedule table
+{
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: .1em solid #ddd;
+}
+th, td
+{
+    font-size: .8em;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: .1em solid #ddd;
+    text-align: center;
+    padding: .2em;
+}
+button
+{
+    color: #000;
+}
+tr:nth-child(even)
+{
+    background-color: rgba(15, 85, 96, 0.31);
+}
+
+nav ul li a:hover
+{
+    background-color: #0f5560;
+}
+
+#contact fieldset
+{
+    margin: auto;
+    display: block;
+    width: 200px;
+}
+a
+{
+    font-family: 'Michroma', sans-serif;
+    color: rgba(69,205,201,0.4);
+}
+#email
+{
+    visibility: hidden;
+}
+/*Tablet*/
+@media (min-width: 768px) 
+{
+    nav
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    nav ul li
+    {
+        display: inline-block;
+        margin: 0;
+    }
+    nav ul li a
+    {
+        font-size: 1.2em;
+        padding: .4em;
+    }
+    #main
+    {
+        max-width: 700px;
+    }
+    /*Used for defaults on spotify links*/
+    .spotify
+    {
+        height: 20em;
+        width: 20em;
+    }
+    #schedule
+    {
+        overflow-x: scroll;
+        font-size: 1em;
+    }
+    #contact fieldset
+    {
+
+        width: 300px;
+    }
+}
+/*Desktop*/
+@media (min-width: 1080px)
+{
+    nav
+    {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+    nav ul li
+    {
+        display: inline-block;
+        margin: 0;
+    }
+    nav ul li a
+    {
+        font-size: 1.3em;
+        padding: .4em;
+    }
+    #background
+    {
+        height: 1080px;
+    }
+    #main
+    {
+        max-width: 900px;
+    }
+    /*Used for defaults on spotify links*/
+    .spotify
+    {
+        height: 25em;
+        width: 25em;
+    }
+    #contact fieldset
+    {
+
+        width: 400px;
+    }
+}
+@media print
+{
+    nav a {
+        visibility: hidden;
+    }
+    #email
+    {
+        visibility: visible;
+    }
+    #handshake
+    {
+        visibility: hidden;
+    }
+    #git
+    {
+        visibility: hidden;
+    }
+    fieldset
+    {
+        visibility: hidden;
+    }
+}

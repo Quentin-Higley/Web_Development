@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<title>Why did I make this?</title>
+		<link href="styleJavascript.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>the tragedy of a dark lord</h1>
+		<h1 id ="wilkommen"></h1>
+		<p id = "Darth">
+		</p>
+		<p id = "Output">
+		</p>
+		<p id = "Output1">
+		</p>
+		<h1 id = "end"></h1>
+	<p><img src = "Images/Palpatine.jpg" alt = "It's Palpatine!"/></p>
+			<script type ="text/javascript">
+				var user = prompt("enter your name:")
+				var name = prompt("enter a name:");
+				var adjective = prompt("enter an adjective:");
+				var object = prompt("enter a object");
+				var noun = prompt("enter a noun:");
+				var verb = prompt("enter a verb:");
+				var object1 = prompt("enter a noun");
+				document.getElementById("wilkommen").innerHTML = "Wilkommen " + user;
+				
+				document.getElementById("Darth").innerHTML = "Did you ever hear the tragedy of Darth <span>" + name + "</span> The <span>" + adjective + "</span>?";
+				
+				document.getElementById("Output").innerHTML = " I thought not. It’s not a story the <span>"+ object +"</span> would tell you. It’s a <span>"+ object1 +"</span> legend. Darth <span>" + name + "</span> was a Dark Lord of the <span>" + object1 + "</span>, so powerful and so <span>" + adjective + "</span> he could use the Force to influence the <span>" + noun + "</span> to create life… He had such a knowledge of the dark side, he could even keep the ones he cared about from <span>" + verb + "</span>.";
+				
+				document.getElementById("Output1").innerHTML = "He became so powerful… the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from <span>" + verb + "</span>, but not himself.";
+				
+				document.getElementById("end").innerHTML = "Not from a <span>" + object + "</span>";
+			</script>
+	
+	</body>
+</html>

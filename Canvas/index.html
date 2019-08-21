@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VaporWave</title>
+
+    <style>
+        body{
+            position: relative;
+            margin: 0;
+            height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        canvas {
+            height: 100%;
+            top: 30%;
+            border: aqua 1px solid;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform:
+                translateX(-50%)
+                rotateX(50deg);
+        }
+
+        div{
+            position: absolute;
+            top: 0;
+            width: 102vw;
+            height: 50%;
+            background: url("Untitled-1.png");
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<canvas>
+
+</canvas>
+<script>
+    let canvas = document.querySelector('canvas');
+    canvas.height = window.innerHeight* 2;
+    canvas.width = window.innerWidth * 1.5;
+    let height = canvas.height;
+    let width = canvas.width;
+    let ctx = canvas.getContext('2d');
+    let gridHeight = canvas.width / 40;
+    let gridLength = canvas.height / 20;
+
+    function Graph(y, veloY){
+        this.y = y;
+        this.veloY = veloY;
+
+        this.draw = function () {
+            ctx.beginPath();
+            ctx.moveTo(0, this.y);
+            ctx.lineTo(width, this.y);
+            ctx.strokeStyle = "aqua";
+            ctx.stroke();
+        };
+
+        this.update = function(){
+            this.y -= this.veloY;
+            this.draw();
+
+            if (this.y < 0){
+                this.y = height;
+            }
+        }
+    }
+
+    let gridArray = [];
+
+    for (let i = 0; i < gridLength; i++){
+        let spacing = i * gridLength;
+        gridArray.push(new Graph(spacing, 1.5));
+    }
+
+    function vaporwave(){
+        requestAnimationFrame(vaporwave);
+        ctx.clearRect(0,0,width, height);
+        
+        for (let i = 0; i < gridArray.length; i++){
+            gridArray[i].update();
+        }
+        for(let i = 0; i < gridHeight; i++){
+            ctx.beginPath();
+            ctx.moveTo((i*40),0);
+            ctx.lineTo((i*40), height);
+            ctx.strokeStyle = "aqua";
+            ctx.stroke()
+        }
+
+    }
+    vaporwave();
+
+</script>
+</body>
+</html>

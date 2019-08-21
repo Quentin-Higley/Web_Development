@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quentin Higley</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+    </style>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<!--<img class="circle-img skill-img-display" src="img/html.png" alt=""><svg class="ring" height="120" width="120"><circle class="circle-background" cx="60" cy="75" r="35"></circle><circle class="circle-progress circle-progress-display" id="JS" stroke-width="10px" fill="transparent" cx="75" cy="60" r="35"></circle></svg>-->
+    <div class="background background-2">
+        <div class="right-section">
+            <div class="nav" style="height: 50px; width: 100%;">
+                <nav>
+                    <ul>
+                        <li><h3>Intro</h3></li>
+                        <li><h3>Skills</h3></li>
+                        <li><h3>Contact</h3></li>
+                        <li><h3>English</h3></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-container">
+            </div>
+        </div>
+    </div>
+    <div class="content-card">
+        <div class="intro">
+            <h1>Quentin Higley</h1>
+            <h2>Junior Computer <br> Scientist</h2>
+            <hr>
+            <h4>Email</h4>
+            <h4>QuentinHigley@mail.weber.edu</h4>
+            <h4>Phone</h4>
+            <h4>1.801.675.1522</h4>
+            <h4>Status</h4>
+            <h4>Available</h4>
+        </div>
+    </div>
+
+<script>
+    let class_number = document.getElementsByClassName("skill-char-container");
+    for (let i=0; i < class_number.length; i++){
+        class_number[i].addEventListener("click", function(){circleSwitch(i);})
+    }
+</script>
+</body>
+</html>

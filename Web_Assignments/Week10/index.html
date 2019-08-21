@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Java Script</title>
+	<script>
+		function display()
+		{
+		    var date = new Date();
+		    var strDate= new Array();
+		    strDate[4] = date.getDate();
+
+
+			var intWeek = date.getDay();
+			switch(intWeek)
+			{
+				case 0:
+				    strDate[7] = "Sonntag";
+				    break;
+                case 1:
+                    strDate[7] = "Montag";
+                    break;
+                case 2:
+                    strDate[7] = "Dienstag";
+                    break;
+                case 3:
+                    strDate[7] = "Mittwoch";
+                    break;
+                case 4:
+                    strDate[7] = "Donnerstag";
+                    break;
+                case 5:
+                    strDate[7] = "Freitag";
+                    break;
+                case 6:
+                    strDate[7] = "Samstag";
+                    break;
+			}
+
+		    var intMonth = date.getMonth();
+		    switch(intMonth)
+		    {
+			    case 0:
+			        strDate[5] = "Januar ";
+			        break;
+                case 1:
+                    strDate[5] = "Februar ";
+                    break;
+                case 2:
+                    strDate[5] = "März ";
+                    break;
+                case 3:
+                    strDate[5] = "April ";
+                    break;
+                case 4:
+                    strDate[5] = "Mai ";
+                    break;
+                case 5:
+                    strDate[5] = "Juni ";
+                    break;
+                case 6:
+                    strDate[5] = "Juli ";
+                    break;
+                case 7:
+                    strDate[5] = "August ";
+                    break;
+                case 8:
+                    strDate[5] = "September ";
+                    break;
+                case 9:
+                    strDate[5] = "Oktober ";
+                    break;
+                case 10:
+                    strDate[5] = "November ";
+                    break;
+                case 11:
+                    strDate[5] = "Dezember ";
+                    break;
+			    default:
+	                strDate[5] = "unbekannt ";
+				    break;
+		    }
+
+		    strDate[6]= date.getFullYear();
+
+
+		    var intHour = date.getHours();
+
+		    if(intHour >= 0 && intHour < 12)
+		        strDate[0] = "Guten Morgen! ";
+		    else if(intHour > 11 && intHour < 19)
+		        strDate[0] = "Guten Tag! ";
+		    else
+		        strDate[0] = "Guten Abend!";
+
+		    if(intHour > 11)
+		    {
+                strDate[1] = intHour - 12;
+                strDate[3] = " PM";
+		    }
+		    else
+		    {
+                strDate[3] = " AM";
+		    }
+
+			strDate[2] = date.getMinutes();
+
+			document.getElementById("output").innerHTML = strDate[0] + " es ist um " + strDate[1] + ":" + strDate[2] + strDate[3] + " am "  +  strDate[7] + ", der " + strDate[4] + " " + strDate[5] + " " + strDate[6] ;
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="click for date" OnClick="display()">
+	<p id="output"></p>
+	<a href="Loop.html">To loop project</a>
+</body>
+</html>

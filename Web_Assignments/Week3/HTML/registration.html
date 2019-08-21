@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="HTML Assignment on Forms IMG and Table" /> 
+		<meta name="keywords" content="HTML< FORMS, TABLES" /> 
+		<meta name="author" content="Quentin Higley" /> 
+		<title>Registration</title>
+	</head>
+<body>
+	<nav>
+		<table>
+			<tr>
+				<th><a href="index.html">Movies,</a></th>
+				<th><a href="schedule.html">Schedule</a></th>
+			</tr>
+		</table>
+	</nav>
+	<hr>
+	
+	<h1>Web2350 registration</h1>
+	
+	<fieldset form="details">
+		<legend> Personal Data </legend>
+		First Name:
+		<input type="text" name="firstName" placeholder="First name" autofocus>
+		<br/>
+		Last Name:
+		<input type="text" name="lastName" placeholder="Last name">
+		<br/>
+		Date of Birth:
+		<input type="date">
+		<br/>
+		Email:
+		<input type="email" name="email" placeholder= "name@domain.com">
+		<br/>
+		URL:
+		<input type="url" name="url" placeholder="https://site.com">
+		<br/>
+		Telophone:
+		<input type="phone" name="lastName" placeholder="1801-123-4567">
+		<br/>
+		Schoesize:
+		<input type="number" min="5" max="18" value="9" step=".5">
+	</fieldset>
+		
+	<fieldset form="Data">
+		<legend> Billing Address </legend>
+		Address: <textarea name="" id="" cols="30" rows="5"></textarea>
+		<br/>
+		Country:
+		<input list="Countries">
+		<datalist id="Countries">
+			<option value="United States"></option>
+			<option value="Germany"></option>
+			<option value="Switzerland"></option>
+		</datalist>
+	</fieldset>
+		
+	<fieldset form="Card">
+		<legend> Card Details </legend>
+		<form action="">
+			<input type="radio" name="payment" value="Visa" checked> Visa <br/>
+			<input type="radio" name="payment" value="Mastercard" > Mastercard <br/>
+			<input type="radio" name="payment" value="AMEX"> AMEX <br/>
+		</form>
+		<br>
+		Name: <input type="text" name="cardName" placeholder="As appears on card">
+		<br/>
+		Card number: <input name="cardNumber" type="text" placeholder="1234 1234 1234">
+		<br/>
+		Security code: <input type="password">
+		<br/>
+		Expiration Date: <input type="date">
+	</fieldset>
+	
+	<fieldset>
+		<input type="submit" value="Submit Registration">
+		<input type="button" value="Clear Registration">
+	</fieldset>
+		
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+/*Basic Styling Reset*/
+
+html, html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+h1,h2,h3{
+     font-family: Montserrat,sans-serif;
+ }
+h4,h5,p{
+    font-family: Raleway, sans-serif;
+}
+.row::after {
+     content: "";
+     clear: both;
+     display: table;
+ }
+hr{
+      border: solid 1px black;
+      box-shadow: 0 0 1px 0 black;
+  }
+
+.color-primary-0 { color: #D3D7DA }	/* Main Primary color */
+.color-primary-1 { color: #889DAE }
+.color-primary-2 { color: #A8B7C3 }
+.color-primary-3 { color: #9DA3A9 }
+.color-primary-4 { color: #889096 }
+
+/*skill chart styling*/
+svg{
+    filter: drop-shadow( 0 0 5px rgba(30, 34, 35, 1));
+}
+.ring{
+    fill: #ADC8FF;
+    stroke: #fefffd;
+    stroke-width: 9px;
+    animation: circleJump 5s ease infinite running;
+}
+.circle-progress{
+    stroke: #1966ff;
+    z-index: 10;
+    transform: rotateZ(90deg);
+    transform-origin: center;
+}
+.circle-progress-display{
+    stroke-dasharray: 0,1;
+    transition: 1s;
+}
+.circle-progress-active{
+    transition: 1s;
+    stroke-dasharray: 176,220;
+}
+
+/*animations for skill chart*/
+.circle-img{
+    position: relative;
+    width: 120px;
+    z-index: 2;
+}
+.skill-char-container{
+    cursor: pointer;
+}
+.skill-img-transition{
+    opacity: 0;
+    transition: .5s;
+}
+.skill-char-container .skill-img-display{
+    transition: .5s;
+    opacity: 1;
+}
+
+/*Different backgrounds*/
+.background-1{
+    background: center fixed no-repeat url("../img/backgroundImg.png");
+    background-size: cover;
+    position: relative;
+}
+.background-2{
+    background: center fixed no-repeat url("../img/oFEj8kchbaI9RVtnoBBADVvrPW7YiyfiWLBBlf15VpU.jpg");
+    background-size: cover;
+    position: relative;
+
+}
+.background-3{
+    background: center fixed no-repeat url("../img/Galaxy.png");
+    background-size: cover;
+    position: relative;
+}
+
+.background{
+    height: 100vh;
+    width: 100%;
+    box-shadow: 0 0 0 30px inset white
+}
+
+.right-section{
+    min-width: 400px;
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 40%;
+    background: white;
+    box-shadow: 0 0 3px 0 black;
+}
+.right-container{
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 95%;
+    background: grey;
+    box-shadow: 0 0 3px 0 black;
+}
+.content-card{
+    min-width: 400px;
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 90vh;
+    top: 5%;
+}
+.intro{
+    position: absolute;
+    top: 50%;
+    left: 47.5%;
+    transform: translate(-50%, -50%);
+}
+.intro h1{
+    white-space: nowrap;
+    text-align: center;
+}
+.intro h2{
+    text-align: center;
+ }
+.intro h4{
+    margin: .2em;
+}
+.nav{
+    min-width: 400px;
+    position: fixed;
+    z-index: 10000;
+}
+.nav nav{
+    position: relative;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+}
+.nav li{
+    display: inline-block;
+    list-style: none;
+    padding: .2em;
+    margin: auto .2em;
+}

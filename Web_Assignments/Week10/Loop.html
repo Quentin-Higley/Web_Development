@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+	<script>
+		function table()
+		{
+            var intInput;
+			while(true)
+			{
+
+		        intInput = prompt("please enter a number greater than 0: ", "0");
+		        parseInt(intInput);
+		        if(!isNaN(intInput) && intInput > 0 && Number.isInteger(intInput))
+		            break;
+			}
+			var table = document.createElement("TABLE");
+			table.setAttribute("id", "change");
+			document.body.appendChild(table);
+			 //document.getElementById("change");
+
+			for(var i = 0; i < intInput; i++)
+			{
+			    var row = table.insertRow(i);
+
+			    var cell = row.insertCell(0);
+
+			    cell.innerHTML = "Row " + (i+1);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="click for input" OnClick="table()">
+	<a href="index.html">To date project</a>
+</body>
+</html>
